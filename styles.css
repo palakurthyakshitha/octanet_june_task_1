@@ -1,0 +1,278 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:white;
+    scroll-behavior: smooth;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+  }
+  section {
+    padding: 50px 10%;
+  }
+  
+    header {
+      position: fixed;
+      border-radius: 20px;
+      background-color: darkslategrey;
+      width: 100%;
+      top: 0;
+      right: 0;
+      z-index: 1050;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 100px;
+      box-shadow: 0 0.5rem 50rem rgba(0, 0, 0, 0.137);
+    }
+    header :hover{
+      box-shadow: 0px 0px 5px white;
+    }
+    .logo {
+      font-size: 25px;
+      text-decoration: solid;
+      font-weight: 800;
+      font-family: "Courgette", "cursive";
+      background: linear-gradient(9deg,rgb(0, 255, 242),rgb(251, 255, 5));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-style: normal;
+      position: relative;
+      padding: 0 15px;
+    }
+    
+    
+  .logo::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-bottom: 3px solid orangered;
+    border-left: 3px solid orangered;
+    bottom: 0;
+    left: 0;
+  }
+  .logo::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid orangered;
+    border-right: 3px solid orangered;
+    top: 0;
+    right: 0;
+  }
+    
+    .navbar {
+      display: flex;
+      border-radius: 20px;
+    }
+   
+    .navbar a {
+      font-size: 1rem;
+      padding: 10px 20px;
+      color: white;
+      font-weight: 500;
+    }
+    .navbar a:hover {
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+      text-decoration: underline;
+      text-decoration-color: rgb(0, 255, 242);
+    }
+    #menu-icon {
+      position: relative;
+      font-size: 2rem;
+      cursor: pointer;
+      display: none;
+    }
+    
+    @media (max-width: 900px) {
+      section {
+        padding: 50px 8%;
+      }
+      #menu-icon {
+        display: initial;
+        color: white;
+      }
+      header .navbar {
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+        transition: left 0.2s ease;
+      }
+      .navbar.active {
+        left:0;
+      }
+      .navbar a {
+        padding: 1.5rem;
+        display: block;
+        background-color: black;
+        background: transparent;
+        backdrop-filter: blur(50px);
+      }
+    }
+  
+  .container{
+      background-image: url(https://www.home-designing.com/wp-content/uploads/2017/05/modern-islamic-villa-home-exterior.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 15px;
+      padding: 50px;
+  }
+  .container h4{
+      font-size: 20px;
+      color: white;
+      padding: 40px;
+  }
+  .container h1{
+      color: white;
+      padding: 50px;
+      font-size: 50px;
+      text-decoration: solid;
+      font-weight: 800;
+      font-family: "Courgette", "cursive";
+      background: linear-gradient(8deg,rgb(95, 92, 92),rgba(0, 225, 255, 0.918));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  @media (max-width: 768px){
+    .container h4{
+      font-size: 15px;
+    }
+    .container h1{
+      font-size: 25px;
+    }
+  }
+  #getintouch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #getintouch img:hover{
+    box-shadow: 0 0 10px rgb(0, 247, 255);
+  }
+  .left{
+    width: 30%;
+  }
+  .left img{
+    width: 100%;
+    border-radius: 20px;
+  }
+  .right{
+    width: 30%;
+  }
+  .right img{
+    width: 100%;
+    border-radius: 20px;
+  }
+  .middle{
+    width: 30%;
+  }
+  .middle h1{
+    font-size: 30px;
+    font-family: "Prata", serif;
+  }
+  .middle p{
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: "Cormorant", serif;
+  }
+  .middle button{
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.938);
+    border-radius: 20px;
+  }
+  .middle button a{
+    color: white;
+  }
+  .middle button:hover{
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+  }
+
+  @media (max-width: 650px) {
+    #getintouch {
+      flex-direction: column;
+      text-align: center;
+      padding: 50px;
+    }
+  
+    .left,.middle, .right {
+      width: 100%;
+    }
+  
+    .left img { 
+      max-width: 100%;
+    }
+  
+    .right img {
+      max-width: 100%; 
+      margin-top: 10px;
+    }
+  }
+
+  .inclusion{
+    background-image:url(https://areicon.com/upload/project/240305-022207-newari-architecture-home-design-Ijseg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    padding: 50px;
+  }
+  .inclusion h1{
+    font-family: "Prata", serif;
+    font-size: 40px;
+    padding: 30px;
+  }
+  .inclusion h4{
+    font-size: 20px;
+    padding: 20px;
+    color: antiquewhite;
+  }
+  .inclusion button{
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.938);
+    border-radius: 20px;
+  }
+  .inclusion button a{
+    color: white;
+  }
+  .inclusion button:hover{
+    box-shadow: 5px 5px 10px rgb(255, 255, 255);
+  }
+  @media (max-width: 650px){
+    .inclusion{
+      background-image:url(https://lh3.googleusercontent.com/proxy/YQpTDPkooFhzAWvg8hLW_Tvlqo8k7sChmkPZf7kFxofyPeS3trjET498hc97EXuF842WiJWQIXjTlByN93xqw0VOBQKp5xxJ6VxfxrbmwDYRZrvcs4dzkQ1IzGwt7Ay9eO8ggei4gOavBFzKPF3xUw_YwnkV);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 25px;
+      padding: 50px;
+    } 
+    .inclusion h4{
+      color: white;
+    }
+  }
